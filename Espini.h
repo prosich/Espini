@@ -33,7 +33,7 @@ class Espini {
     WiFiUDP udp;
     Syslog  *syslog;
   public:
-    Espini(WifiAPEntry ws[], int wsc, 
+    Espini(ESP8266WiFiMulti wifis, 
            char *app, char *ver, 
            char *otas, char *logs);
     char   *getchipid();
