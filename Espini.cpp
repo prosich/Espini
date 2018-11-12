@@ -1,8 +1,8 @@
 #include "Espini.h"
 
 Espini::Espini(ESP8266WiFiMulti wifis, 
-               char *app,  char *ver, 
-               char *otas, char *logs) {
+               const char *app,  const char *ver, 
+               const char *otas, const char *logs) {
 
   Serial.begin(74880);
 
@@ -29,6 +29,6 @@ Espini::Espini(ESP8266WiFiMulti wifis,
 
 char *Espini::getchipid()    {return(chipId);}
 
-void  Espini::log(char *msg) {syslog->log(msg);}
+void  Espini::log(const char *msg) {syslog->log(msg);}
 
 
