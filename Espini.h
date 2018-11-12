@@ -34,10 +34,10 @@ class Espini {
     Syslog  *syslog;
   public:
     Espini(ESP8266WiFiMulti wifis, 
-           char *app, char *ver, 
-           char *otas, char *logs);
+           const char *app, const char *ver, 
+           const char *otas, const char *logs);
     char   *getchipid();
-    void   log(char *msg);
+    void   log(const char *msg);
 };
 
 #endif
