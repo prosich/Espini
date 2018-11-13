@@ -8,8 +8,19 @@
      - Actualiza soft. si es necesario.
      - Configura syslog remoto
 
-- Necesita un servidor http que entienda la petición OTA.
-
+- Necesita un servidor http que al recibir la petición OTA 
+  /espota?ser=...&app=...&ver=...:
+     - Decida si es necesaria la actualización
+     - Si lo es, vuelque el firmware:
+       ```
+       echo "Content-type: application/octet-stream"
+       echo "Content-Length: $(wc -c $fich)"
+       echo "Content-Transfer-Encoding: binary"
+       echo "Content-Disposition: attachment; filename=$fich"
+       echo ""
+       cat $fich
+       ```
+           
 - Necesita un servidor syslog.
 
 - Ejemplo de uso recomendado: https://github.com/prosich/demoEspini
