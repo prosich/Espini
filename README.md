@@ -11,7 +11,7 @@
 - Necesita un servidor http que al recibir la petición OTA 
   /espota?ser=...&app=...&ver=...:
      - Decida si es necesaria la actualización
-     - Si lo es, vuelque el firmware:
+     - Si lo es, vuelque el firmware usando algo así:
        ```
        echo "Content-type: application/octet-stream"
        echo "Content-Length: $(wc -c $fich)"
