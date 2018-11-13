@@ -8,5 +8,9 @@
      - Actualiza soft. si es necesario.
      - Configura syslog remoto
 
+- Necesita un servidor http que entienda la petición OTA.
+
+- Necesita un servidor syslog.
+
 - Ejemplo de uso recomendado: https://github.com/prosich/demoEspini
      
