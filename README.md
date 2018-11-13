@@ -8,5 +8,5 @@
      - Actualiza soft. si es necesario.
      - Configura syslog remoto
 
-- Ejemplo de uso: https://github.com/prosich/demoEspini
+- Ejemplo de uso recomendado: https://github.com/prosich/demoEspini
      
