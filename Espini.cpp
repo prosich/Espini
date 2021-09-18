@@ -17,7 +17,8 @@ Espini::Espini(ESP8266WiFiMulti wifis,
     for (int segs=1; segs<=15; segs++) {
       if (wifis.run() == WL_CONNECTED) {
         Serial.println(WiFi.localIP()); 
-        ESPhttpUpdate.update(otas,80,
+	WiFiClient client;
+        ESPhttpUpdate.update(client,otas,80,
           "/espota?ser="+String(chipId)+"&app="+app+"&ver="+ver);
 	return;
       }
